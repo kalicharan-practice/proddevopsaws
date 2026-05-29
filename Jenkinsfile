@@ -24,6 +24,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
+                export PYTHONPATH=$WORKSPACE/app
+
                 pytest app/tests/
                 '''
             }
