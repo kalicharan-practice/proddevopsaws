@@ -4,6 +4,10 @@ pipeline {
     environment {
         IMAGE = "kalicharandas001/awspythonapp:${BUILD_NUMBER}"
         KUBECONFIG = "/var/lib/jenkins/.kube/config"
+        AWS_ACCESS_KEY_ID     = credentials('aws creds')
+        AWS_SECRET_ACCESS_KEY = credentials('aws creds')
+        AWS_DEFAULT_REGION    = "us-east-1"
+
     }
 
     stages {
