@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         IMAGE = "kalicharandas001/awspythonapp:${BUILD_NUMBER}"
+        KUBECONFIG = "/var/lib/jenkins/.kube/config"
     }
 
     stages {
